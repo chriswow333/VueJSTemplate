@@ -1,0 +1,43 @@
+# server port
+port: 3001
+mode: develop
+backendBaseUrl: /webapi/v1
+frontEndBaseUrl: /pds/v1
+
+post:
+  formLimit: 200mb
+
+mysql: 
+  pdsdb:
+    database: Pdsdb
+    host: 127.0.0.1
+    username: root
+    password: password
+    connectionLimit: 10
+    waitForConnections: true
+    queueLimit: 0
+
+# subscription AFTP Api Service
+api:
+  subscriptionAftp:
+    host: 127.0.0.1
+    port: 3002
+    baseUrl: api/v1
+
+#  user login session.
+jsonWebToken: 
+  tokenType: Bearer
+  secret: cwbpdsplatform
+  refreshTokenInTime: 3000
+  expiredTokenOnTime: 360000
+
+logger: 
+  infoName: info-file
+  infoPath: /data/workspace/pds_workspace/web_workspace/log
+  errorName: error-file
+  errorPath: /data/workspace/pds_workspace/web_workspace/log
+  # frontend error send back to serverend
+  errorClientName: client-error-file
+  errorClientPath: /data/workspace/pds_workspace/web_workspace/log
+  actionName: user-action
+  actionPath: /data/workspace/pds_workspace/web_workspace/log

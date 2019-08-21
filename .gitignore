@@ -1,0 +1,7 @@
+node-v10.15.0-linux-x64/
+node-v10.15.0-linux-x64.tar.xz
+node_modules/
+log/
+/routes/config/config.yml
+/public/dist/
+package-lock.json
